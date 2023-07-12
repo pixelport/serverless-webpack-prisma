@@ -130,7 +130,7 @@ describe('Check serverless-webpack-prisma plugin', () => {
   test('installPrismaPackage() install prisma devDeprendencies', () => {
     const cwd = `/fake-path/${randomBytes(4).toString('hex')}`;
     childProcess.execSync.mockImplementation((command, options) => {
-      expect(command).toEqual(`npm install -D prisma`);
+      expect(command).toEqual(`npm install -D prisma@4`);
       expect(options).toEqual({ cwd });
     });
 
