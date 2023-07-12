@@ -79,7 +79,7 @@ class ServerlessWebpackPrisma {
 
   installPrismaPackage({ cwd }) {
     this.serverless.cli.log('Install prisma devDependencies for generate');
-    this.runPackageInstallCommand({ packageName: 'prisma', cwd, dev: true });
+    this.runPackageInstallCommand({ packageName: 'prisma@4', cwd, dev: true });
   }
 
   removePrismaPackage({ cwd }) {
